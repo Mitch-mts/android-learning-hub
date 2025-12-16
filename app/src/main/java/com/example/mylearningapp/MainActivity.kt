@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             val name: String = name.text.toString()
             val resultText = "Hello $name"
 
-            result.setText(resultText)
+            result.text = resultText
 
             if (image.contentDescription.toString() == "Image1") {
                 image.setImageResource(R.drawable.pirates)
