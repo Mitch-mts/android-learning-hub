@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MyLearningApp</string>
+
+    <string-array name="countries">
+        <item>USA</item>
+        <item>Canada</item>
+        <item>Mexico</item>
+        <item>Zimbabwe</item>
+        <item>Japan</item>
+    </string-array>
+
+
 </resources>

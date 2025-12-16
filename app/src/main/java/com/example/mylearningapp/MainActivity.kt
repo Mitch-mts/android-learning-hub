@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var radioButton : Button
     lateinit var toggle : Button
+    lateinit var spinner : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +48,7 @@ class MainActivity : AppCompatActivity() {
         checkButton = findViewById(R.id.button3)
         radioButton = findViewById(R.id.radio)
         toggle = findViewById(R.id.toggle)
-
-
+        spinner = findViewById(R.id.spinner)
 
 
         submit.setOnClickListener {
@@ -79,6 +79,11 @@ class MainActivity : AppCompatActivity() {
 
         toggle.setOnClickListener {
             val intent = Intent(this, ToggleActivity2::class.java)
+            startActivity(intent)
+        }
+
+        spinner.setOnClickListener {
+            val intent = Intent(this, SpinnnerActivity::class.java)
             startActivity(intent)
         }
 

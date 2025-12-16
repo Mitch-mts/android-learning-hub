@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".SpinnnerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ToggleActivity2"
             android:exported="false" />
         <activity
