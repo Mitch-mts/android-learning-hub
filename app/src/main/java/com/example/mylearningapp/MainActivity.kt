@@ -1,5 +1,6 @@
 package com.example.mylearningapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -16,6 +17,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var submit : Button
     lateinit var result : TextView
     lateinit var image : ImageView
+
+    lateinit var checkButton : Button
+
+    lateinit var radioButton : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         submit = findViewById(R.id.button)
         result = findViewById(R.id.textView)
         image = findViewById(R.id.image1)
+        checkButton = findViewById(R.id.button3)
+        radioButton = findViewById(R.id.radio)
+
 
 
         submit.setOnClickListener {
@@ -53,6 +62,16 @@ class MainActivity : AppCompatActivity() {
                 image.contentDescription = "Image1"
             }
 
+        }
+
+        checkButton.setOnClickListener {
+            val intent = Intent(this, CheckBoxAndRadioButtonActivity2::class.java)
+            startActivity(intent)
+        }
+
+        radioButton.setOnClickListener {
+            val intent = Intent(this, RadioButtonActivity2::class.java)
+            startActivity(intent)
         }
 
 
