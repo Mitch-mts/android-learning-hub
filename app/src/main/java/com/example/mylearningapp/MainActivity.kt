@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var checkButton : Button
 
     lateinit var radioButton : Button
+    lateinit var toggle : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         image = findViewById(R.id.image1)
         checkButton = findViewById(R.id.button3)
         radioButton = findViewById(R.id.radio)
+        toggle = findViewById(R.id.toggle)
+
 
 
 
@@ -71,6 +74,11 @@ class MainActivity : AppCompatActivity() {
 
         radioButton.setOnClickListener {
             val intent = Intent(this, RadioButtonActivity2::class.java)
+            startActivity(intent)
+        }
+
+        toggle.setOnClickListener {
+            val intent = Intent(this, ToggleActivity2::class.java)
             startActivity(intent)
         }
 
