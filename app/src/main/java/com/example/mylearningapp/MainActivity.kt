@@ -17,12 +17,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var submit : Button
     lateinit var result : TextView
     lateinit var image : ImageView
-
     lateinit var checkButton : Button
-
     lateinit var radioButton : Button
     lateinit var toggle : Button
     lateinit var spinner : Button
+    lateinit var toolBar : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +48,8 @@ class MainActivity : AppCompatActivity() {
         radioButton = findViewById(R.id.radio)
         toggle = findViewById(R.id.toggle)
         spinner = findViewById(R.id.spinner)
+        toolBar = findViewById(R.id.toolbar)
+
 
 
         submit.setOnClickListener {
@@ -84,6 +85,11 @@ class MainActivity : AppCompatActivity() {
 
         spinner.setOnClickListener {
             val intent = Intent(this, SpinnnerActivity::class.java)
+            startActivity(intent)
+        }
+
+        toolBar.setOnClickListener {
+            val intent = Intent(this, TopAppBarActivity::class.java)
             startActivity(intent)
         }
 
