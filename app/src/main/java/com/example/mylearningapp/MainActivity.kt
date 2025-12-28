@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var toggle : Button
     lateinit var spinner : Button
     lateinit var toolBar : Button
+    lateinit var toast: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         toggle = findViewById(R.id.toggle)
         spinner = findViewById(R.id.spinner)
         toolBar = findViewById(R.id.toolbar)
+        toast = findViewById(R.id.toast)
 
 
 
@@ -90,6 +92,11 @@ class MainActivity : AppCompatActivity() {
 
         toolBar.setOnClickListener {
             val intent = Intent(this, TopAppBarActivity::class.java)
+            startActivity(intent)
+        }
+
+        toast.setOnClickListener {
+            val intent = Intent(this, ToastActivity::class.java)
             startActivity(intent)
         }
 

@@ -32,6 +32,11 @@ class TopAppBarActivity : AppCompatActivity() {
 
         }
 
+        toolbar.setNavigationOnClickListener {
+            //This method mimics pressing the physical back button on the phone
+            finish()
+        }
+
         toolbar.setOnMenuItemClickListener { item ->
             val message = when(item.itemId) {
                 R.id.share -> "Share icon is clicked"
