@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var listView: Button
 
+    lateinit var recyclerView : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         toolBar = findViewById(R.id.toolbar)
         toast = findViewById(R.id.toast)
         listView = findViewById(R.id.listView)
-
+        recyclerView = findViewById(R.id.recyclerView)
 
 
         submit.setOnClickListener {
@@ -105,6 +107,11 @@ class MainActivity : AppCompatActivity() {
 
         listView.setOnClickListener {
             val intent = Intent(this, ListViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        recyclerView.setOnClickListener {
+            val intent = Intent(this, RecyclerViewActivity::class.java)
             startActivity(intent)
         }
 
