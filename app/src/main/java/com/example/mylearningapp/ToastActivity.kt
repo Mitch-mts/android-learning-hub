@@ -17,7 +17,7 @@ class ToastActivity : AppCompatActivity() {
     lateinit var toastButton: Button
     lateinit var home: Button
     lateinit var snack: Button
-    lateinit var toast_layout: LinearLayout
+    lateinit var toastLayout: LinearLayout
     lateinit var dialog: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ class ToastActivity : AppCompatActivity() {
         toastButton = findViewById(R.id.toast_button)
         snack = findViewById(R.id.snack_button)
         home = findViewById(R.id.button4)
-        toast_layout = findViewById(R.id.toast_layout)
+        toastLayout = findViewById(R.id.toast_layout)
         dialog = findViewById(R.id.dialog_button)
 
 
@@ -44,7 +44,7 @@ class ToastActivity : AppCompatActivity() {
 
         snack.setOnClickListener {
             Snackbar.make(
-                toast_layout,
+                toastLayout,
                 "This is a snack bar message example",
                 Snackbar.LENGTH_SHORT
             )
@@ -60,18 +60,19 @@ class ToastActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
     fun showAlertDialog() {
         val alertDialog = AlertDialog.Builder(this)
         alertDialog.setTitle("Change")
         alertDialog.setMessage("Do you wish to continue changing the text on the button?")
         alertDialog.setIcon(R.drawable.warning)
         alertDialog.setCancelable(false)
+
         alertDialog.setNegativeButton("No") { dialogInterface, _ ->
             dialogInterface.cancel()
         }
+
         alertDialog.setPositiveButton("Yes") { _, _ ->
-            dialog.text = "Alert Dialog"
+            dialog.text = getString(R.string.alert_dialog)
         }
 
         alertDialog.create().show()
