@@ -121,5 +121,12 @@
             android:layout_marginTop="10dp"
             android:text="Grid View" />
 
+        <Button
+            android:id="@+id/webView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Web View" />
+
     </LinearLayout>
 </ScrollView>

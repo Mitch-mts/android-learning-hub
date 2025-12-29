@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var gridView : Button
 
+    lateinit var webView : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         listView = findViewById(R.id.listView)
         recyclerView = findViewById(R.id.recyclerView)
         gridView = findViewById(R.id.gridView)
+        webView = findViewById(R.id.webView)
 
 
 
@@ -121,6 +124,11 @@ class MainActivity : AppCompatActivity() {
 
         gridView.setOnClickListener {
             val intent = Intent(this, GridViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        webView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)
         }
 
