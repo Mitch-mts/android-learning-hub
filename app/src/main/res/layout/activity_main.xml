@@ -100,5 +100,12 @@
             android:layout_marginTop="10dp"
             android:text="Toast" />
 
+        <Button
+            android:id="@+id/listView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="List View" />
+
     </LinearLayout>
 </ScrollView>

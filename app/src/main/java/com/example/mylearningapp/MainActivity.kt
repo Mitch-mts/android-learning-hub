@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var toolBar : Button
     lateinit var toast: Button
 
+    lateinit var listView: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         spinner = findViewById(R.id.spinner)
         toolBar = findViewById(R.id.toolbar)
         toast = findViewById(R.id.toast)
+        listView = findViewById(R.id.listView)
 
 
 
@@ -97,6 +100,11 @@ class MainActivity : AppCompatActivity() {
 
         toast.setOnClickListener {
             val intent = Intent(this, ToastActivity::class.java)
+            startActivity(intent)
+        }
+
+        listView.setOnClickListener {
+            val intent = Intent(this, ListViewActivity::class.java)
             startActivity(intent)
         }
 
