@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var recyclerView : Button
 
+    lateinit var gridView : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +59,8 @@ class MainActivity : AppCompatActivity() {
         toast = findViewById(R.id.toast)
         listView = findViewById(R.id.listView)
         recyclerView = findViewById(R.id.recyclerView)
+        gridView = findViewById(R.id.gridView)
+
 
 
         submit.setOnClickListener {
@@ -112,6 +116,11 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.setOnClickListener {
             val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        gridView.setOnClickListener {
+            val intent = Intent(this, GridViewActivity::class.java)
             startActivity(intent)
         }
 
