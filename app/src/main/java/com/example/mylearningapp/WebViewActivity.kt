@@ -1,6 +1,7 @@
 package com.example.mylearningapp
 
 import android.os.Bundle
+import android.util.Log
 import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,9 @@ class WebViewActivity : AppCompatActivity() {
 
         onBackPressedDispatcher.addCallback(this, callback)
 
+        Log.d("WebViewActivity", "onCreate() called")
+
+
     }
 
     val callback = object : OnBackPressedCallback(true) {
@@ -38,6 +42,31 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("WebViewActivity", "onStart() called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("WebViewActivity", "onStop() called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("WebViewActivity", "onResume() called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("WebViewActivity", "onDestroy() called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("WebViewActivity", "onRestart() called")
     }
 
 
