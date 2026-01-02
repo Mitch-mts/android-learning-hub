@@ -36,10 +36,10 @@ class ToggleActivity2 : AppCompatActivity() {
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 image.visibility = View.INVISIBLE
-                result.text = "The image is not visible"
+                result.text = getString(R.string.the_image_is_not_visible)
             } else {
                 image.visibility = View.VISIBLE
-                result.text = "The image is visible"
+                result.text = getString(R.string.the_image_is_visible)
             }
         }
 
