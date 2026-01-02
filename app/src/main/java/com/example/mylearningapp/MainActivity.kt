@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var webView : Button
 
+    lateinit var fragment : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         gridView = findViewById(R.id.gridView)
         webView = findViewById(R.id.webView)
+        fragment = findViewById(R.id.fragment_example)
 
 
 
@@ -129,6 +132,11 @@ class MainActivity : AppCompatActivity() {
 
         webView.setOnClickListener {
             val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        fragment.setOnClickListener {
+            val intent = Intent(this, FragmentLifeCycleActivity::class.java)
             startActivity(intent)
         }
 

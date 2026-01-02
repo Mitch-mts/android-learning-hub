@@ -128,5 +128,12 @@
             android:layout_marginTop="10dp"
             android:text="Web View" />
 
+        <Button
+            android:id="@+id/fragment_example"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fragment Example" />
+
     </LinearLayout>
 </ScrollView>
