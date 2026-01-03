@@ -3,6 +3,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
 
     <application
         android:allowBackup="true"
@@ -13,6 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
+        <activity
+            android:name=".ServicesActivity"
+            android:exported="false" />
         <activity
             android:name=".FragmentLifeCycleActivity"
             android:exported="false" />
@@ -55,6 +60,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--       for each service created it should be included in the android manifest -->
+        <service android:name=".ClassicServiceExample"/>
+        <service android:name=".JobIntentServiceExample"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
     </application>
 
 </manifest>

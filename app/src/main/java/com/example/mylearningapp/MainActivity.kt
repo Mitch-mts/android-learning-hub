@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var webView : Button
 
     lateinit var fragment : Button
+    lateinit var services : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,6 +67,8 @@ class MainActivity : AppCompatActivity() {
         gridView = findViewById(R.id.gridView)
         webView = findViewById(R.id.webView)
         fragment = findViewById(R.id.fragment_example)
+        services = findViewById(R.id.service_example)
+
 
 
 
@@ -137,6 +140,11 @@ class MainActivity : AppCompatActivity() {
 
         fragment.setOnClickListener {
             val intent = Intent(this, FragmentLifeCycleActivity::class.java)
+            startActivity(intent)
+        }
+
+        services.setOnClickListener {
+            val intent = Intent(this, ServicesActivity::class.java)
             startActivity(intent)
         }
 
