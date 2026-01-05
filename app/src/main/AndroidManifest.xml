@@ -62,8 +62,8 @@
         </activity>
 
 <!--       for each service created it should be included in the android manifest -->
-        <service android:name=".ClassicServiceExample"/>
-        <service android:name=".JobIntentServiceExample"
+        <service android:name=".classes.ClassicServiceExample"/>
+        <service android:name=".classes.JobIntentServiceExample"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
 
 <!--        broacast receiver classes which is only used for API level 25 and lower on android-->

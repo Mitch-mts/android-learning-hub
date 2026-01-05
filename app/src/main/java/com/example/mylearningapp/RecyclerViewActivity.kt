@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mylearningapp.classes.RecyclerViewAdapter
 
 class RecyclerViewActivity : AppCompatActivity() {
 
@@ -48,7 +49,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         imagesList.add(R.drawable.mexico)
         imagesList.add(R.drawable.japan)
 
-        val adapter = RecyclerViewAdapter(countryNameList, detailsList, imagesList, this@RecyclerViewActivity)
+        val adapter =
+            RecyclerViewAdapter(countryNameList, detailsList, imagesList, this@RecyclerViewActivity)
         recyclerView.adapter = adapter
 
     }

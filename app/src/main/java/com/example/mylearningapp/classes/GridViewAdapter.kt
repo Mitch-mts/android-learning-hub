@@ -1,4 +1,4 @@
-package com.example.mylearningapp
+package com.example.mylearningapp.classes
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.mylearningapp.R
 
 class GridViewAdapter(
     var context: Context,

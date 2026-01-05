@@ -1,4 +1,4 @@
-package com.example.mylearningapp
+package com.example.mylearningapp.classes
 
 import android.content.Context
 import android.content.Intent

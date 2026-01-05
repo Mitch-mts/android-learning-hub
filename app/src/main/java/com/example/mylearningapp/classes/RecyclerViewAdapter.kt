@@ -1,4 +1,4 @@
-package com.example.mylearningapp
+package com.example.mylearningapp.classes
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mylearningapp.R
 import de.hdodenhof.circleimageview.CircleImageView
 
 
@@ -22,7 +24,7 @@ class RecyclerViewAdapter
         var textViewCountryName = itemView.findViewById<TextView>(R.id.textViewCountryName)
         var textViewDetail = itemView.findViewById<TextView>(R.id.textViewDetail)
         var imageView = itemView.findViewById<CircleImageView>(R.id.country_image)
-        var cardView = itemView.findViewById<androidx.cardview.widget.CardView>(R.id.cardView)
+        var cardView = itemView.findViewById<CardView>(R.id.cardView)
     }
 
     override fun onCreateViewHolder(

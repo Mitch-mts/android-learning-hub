@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mylearningapp.classes.ClassicServiceExample
+import com.example.mylearningapp.classes.JobIntentServiceExample
 
 class ServicesActivity : AppCompatActivity() {
 
