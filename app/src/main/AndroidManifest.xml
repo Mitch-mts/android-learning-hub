@@ -66,6 +66,13 @@
         <service android:name=".JobIntentServiceExample"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
 
+<!--        broacast receiver classes which is only used for API level 25 and lower on android-->
+<!--        <receiver android:name=".BroadcastExample" android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action."/>-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
     </application>
 
 </manifest>

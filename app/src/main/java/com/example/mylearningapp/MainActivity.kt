@@ -1,6 +1,7 @@
 package com.example.mylearningapp
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var fragment : Button
     lateinit var services : Button
 
+    var broadcast = BroadcastExample()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
 
         name = findViewById(R.id.editTextText)
         submit = findViewById(R.id.button)
@@ -149,5 +153,19 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        // this is how to define a broadcast receiver for all API levels
+        val filter = IntentFilter()
+        filter.addAction("android.intent.action.AIRPLANE_MODE")
+        registerReceiver(broadcast, filter)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(broadcast)
     }
 }
