@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
+        <activity
+            android:name=".SharedPreferencesActivity"
+            android:exported="false" />
         <activity
             android:name=".ServicesActivity"
             android:exported="false" />
@@ -59,20 +61,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--       for each service created it should be included in the android manifest -->
-        <service android:name=".classes.ClassicServiceExample"/>
-        <service android:name=".classes.JobIntentServiceExample"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
-
-<!--        broacast receiver classes which is only used for API level 25 and lower on android-->
-<!--        <receiver android:name=".BroadcastExample" android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action."/>-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
-
+        </activity> <!-- for each service created it should be included in the android manifest -->
+        <service android:name=".classes.ClassicServiceExample" />
+        <service
+            android:name=".classes.JobIntentServiceExample"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>

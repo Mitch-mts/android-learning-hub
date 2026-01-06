@@ -111,6 +111,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        mainBinding.sharedPreferences.setOnClickListener {
+            val intent = Intent(this, SharedPreferencesActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
