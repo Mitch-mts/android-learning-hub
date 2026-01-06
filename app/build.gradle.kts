@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.config.JvmTarget
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)

@@ -40,7 +40,7 @@
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submitButton"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -59,7 +59,7 @@
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/checkButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

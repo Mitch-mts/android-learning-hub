@@ -2,27 +2,23 @@ package com.example.mylearningapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mylearningapp.databinding.ActivityCheckBoxAndRadioButton2Binding
 
 class CheckBoxAndRadioButtonActivity2 : AppCompatActivity() {
-
-    lateinit var male : CheckBox
-    lateinit var female : CheckBox
-    lateinit var result : TextView
-    lateinit var home : Button
-
+    lateinit var checkBoxBinding : ActivityCheckBoxAndRadioButton2Binding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_check_box_and_radio_button2)
+
+        checkBoxBinding = ActivityCheckBoxAndRadioButton2Binding.inflate(layoutInflater)
+        val view = checkBoxBinding.root
+        setContentView(view)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -30,37 +26,29 @@ class CheckBoxAndRadioButtonActivity2 : AppCompatActivity() {
             insets
         }
 
-
-        male = findViewById(R.id.checkBox)
-        female = findViewById(R.id.checkBox2)
-        result = findViewById(R.id.textView3)
-        home = findViewById(R.id.home)
-
-
-
-        male.setOnClickListener {
-            if (male.isChecked) {
-                result.text = "You are a male"
-                female.isChecked = false
+        checkBoxBinding.checkBox.setOnClickListener {
+            if (checkBoxBinding.checkBox.isChecked) {
+                checkBoxBinding.textView3.text = "You are a male"
+                checkBoxBinding.checkBox2.isChecked = false
             } else {
-                result.text = "What is your gender?"
+                checkBoxBinding.textView3.text = "What is your gender?"
 
             }
 
         }
 
-        female.setOnClickListener {
-            if (female.isChecked) {
-                result.text = "You are a female"
-                male.isChecked = false
+        checkBoxBinding.checkBox2.setOnClickListener {
+            if (checkBoxBinding.checkBox2.isChecked) {
+                checkBoxBinding.textView3.text = "You are a female"
+                checkBoxBinding.checkBox.isChecked = false
             } else {
-                result.text = "What is your gender?"
+                checkBoxBinding.textView3.text = "What is your gender?"
 
             }
 
         }
 
-        home.setOnClickListener {
+        checkBoxBinding.home.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
