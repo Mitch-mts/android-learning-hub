@@ -115,6 +115,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SharedPreferencesActivity::class.java)
             startActivity(intent)
         }
+        mainBinding.language.setOnClickListener {
+            val intent = Intent(this, LanguageSupportActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }

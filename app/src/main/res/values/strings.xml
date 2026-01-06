@@ -20,6 +20,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="hello">Hello World</string>
+    <string name="show_toast">Show a Toast message</string>
+    <string name="toast">This is a toast message</string>
 
 
 </resources>

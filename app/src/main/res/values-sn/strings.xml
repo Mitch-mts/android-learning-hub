@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyLearningApp</string>
+    <string name="hello">"Kwaziso Kwamuri "</string>
+    <string name="show_toast">Ratidza Chikwangwari</string>
+    <string name="toast">Iyi itsamba yabva inoratidza chikwangwari</string>
+</resources>

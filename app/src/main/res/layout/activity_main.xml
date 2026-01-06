@@ -149,5 +149,12 @@
             android:layout_marginTop="10dp"
             android:text="Shared Preferences" />
 
+        <Button
+            android:id="@+id/language"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Multi Language Support" />
+
     </LinearLayout>
 </ScrollView>

@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".LanguageSupportActivity"
+            android:exported="false" />
+        <activity
             android:name=".SharedPreferencesActivity"
             android:exported="false" />
         <activity
