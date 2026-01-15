@@ -120,6 +120,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        mainBinding.fragmentContent.setOnClickListener {
+            val intent = Intent(this, FragmentContentActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

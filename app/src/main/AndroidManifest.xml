@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".FragmentContentActivity"
+            android:exported="false" />
+        <activity
             android:name=".LanguageSupportActivity"
             android:exported="false" />
         <activity
