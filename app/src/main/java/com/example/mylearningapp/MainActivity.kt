@@ -125,6 +125,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        mainBinding.listFragment.setOnClickListener {
+            val intent = Intent(this, ListFragmentActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

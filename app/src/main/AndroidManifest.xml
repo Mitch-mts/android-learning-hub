@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".SecondListViewActivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListFragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".FragmentContentActivity"
             android:exported="false" />
         <activity
