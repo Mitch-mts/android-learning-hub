@@ -130,6 +130,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        mainBinding.dialogFragment.setOnClickListener {
+            val intent = Intent(this, DialogFragmentActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
