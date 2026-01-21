@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".sendData.SecondCalledActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sendData.SendDataToNextActivity"
+            android:exported="false" />
+        <activity
             android:name=".DialogFragmentActivity"
             android:exported="false" />
         <activity

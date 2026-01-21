@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mylearningapp.classes.BroadcastExample
 import com.example.mylearningapp.databinding.ActivityMainBinding
+import com.example.mylearningapp.sendData.SendDataToNextActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainBinding : ActivityMainBinding
@@ -132,6 +133,11 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding.dialogFragment.setOnClickListener {
             val intent = Intent(this, DialogFragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        mainBinding.sendData.setOnClickListener {
+            val intent = Intent(this, SendDataToNextActivity::class.java)
             startActivity(intent)
         }
 
