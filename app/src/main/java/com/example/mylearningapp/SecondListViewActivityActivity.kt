@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mylearningapp.fragments.ClubImageFragment
 
 class SecondListViewActivityActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

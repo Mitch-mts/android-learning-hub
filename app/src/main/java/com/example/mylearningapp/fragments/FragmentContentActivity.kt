@@ -1,4 +1,4 @@
-package com.example.mylearningapp
+package com.example.mylearningapp.fragments
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.mylearningapp.R
+import com.example.mylearningapp.SecondFragment
 
 class FragmentContentActivity : AppCompatActivity() {
     lateinit var replace: Button

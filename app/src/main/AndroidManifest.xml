@@ -15,22 +15,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLearningApp">
         <activity
+            android:name=".FragmentToFragmentTransferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sendData.SendDataFromFragmentToActivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sendData.SendDataFromActivityToFragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".sendData.SecondCalledActivity"
             android:exported="false" />
         <activity
             android:name=".sendData.SendDataToNextActivity"
             android:exported="false" />
         <activity
-            android:name=".DialogFragmentActivity"
+            android:name=".fragments.DialogFragmentActivity"
             android:exported="false" />
         <activity
             android:name=".SecondListViewActivityActivity"
             android:exported="false" />
         <activity
-            android:name=".ListFragmentActivity"
+            android:name=".fragments.ListFragmentActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentContentActivity"
+            android:name=".fragments.FragmentContentActivity"
             android:exported="false" />
         <activity
             android:name=".LanguageSupportActivity"
@@ -42,7 +51,7 @@
             android:name=".ServicesActivity"
             android:exported="false" />
         <activity
-            android:name=".FragmentLifeCycleActivity"
+            android:name=".fragments.FragmentLifeCycleActivity"
             android:exported="false" />
         <activity
             android:name=".WebViewActivity"

@@ -9,6 +9,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mylearningapp.classes.BroadcastExample
 import com.example.mylearningapp.databinding.ActivityMainBinding
+import com.example.mylearningapp.fragments.DialogFragmentActivity
+import com.example.mylearningapp.fragments.FragmentContentActivity
+import com.example.mylearningapp.fragments.FragmentLifeCycleActivity
+import com.example.mylearningapp.fragments.ListFragmentActivity
+import com.example.mylearningapp.fragments.SendDataFromFragmentToActivityFragment
+import com.example.mylearningapp.sendData.SendDataFromActivityToFragmentActivity
+import com.example.mylearningapp.sendData.SendDataFromFragmentToActivityActivity
 import com.example.mylearningapp.sendData.SendDataToNextActivity
 
 class MainActivity : AppCompatActivity() {
@@ -138,6 +145,21 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding.sendData.setOnClickListener {
             val intent = Intent(this, SendDataToNextActivity::class.java)
+            startActivity(intent)
+        }
+
+        mainBinding.sendDataToFragmentFromActivity.setOnClickListener {
+            val intent = Intent(this, SendDataFromActivityToFragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        mainBinding.sendDataToActivityFromFragment.setOnClickListener {
+            val intent = Intent(this, SendDataFromFragmentToActivityActivity::class.java)
+            startActivity(intent)
+        }
+
+        mainBinding.sendDataToFragmentFromFragment.setOnClickListener {
+            val intent = Intent(this, FragmentToFragmentTransferActivity::class.java)
             startActivity(intent)
         }
 

@@ -5,28 +5,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import com.example.mylearningapp.fragments.FirstFragment
+import com.example.mylearningapp.fragments.SharingFragmentNumberOneFragment
 
-class ListFragmentActivity : AppCompatActivity() {
+class FragmentToFragmentTransferActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        setContentView(R.layout.activity_list_fragment)
-
+        setContentView(R.layout.activity_fragment_to_fragment_transfer)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // the below code is used to add a fragment to an activity
-        val fragmentManager: FragmentManager = supportFragmentManager
-        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-
-        val myListFragment = MyListFragment()
-        fragmentTransaction.add(R.id.firstFrame, myListFragment)
+        val  fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.transferFrame, SharingFragmentNumberOneFragment())
         fragmentTransaction.commit()
 
     }

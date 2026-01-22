@@ -184,5 +184,26 @@
             android:layout_marginTop="10dp"
             android:text="Send data to next Activity" />
 
+        <Button
+            android:id="@+id/send_data_toFragment_from_activity"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Send data to Fragment from Activity" />
+
+        <Button
+            android:id="@+id/send_data_to_activity_from_fragment"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Send data to Activity from Fragment" />
+
+        <Button
+            android:id="@+id/send_data_to_fragment_from_fragment"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Send data to Fragment from Fragment" />
+
     </LinearLayout>
 </ScrollView>
