@@ -25,6 +25,10 @@
     <string name="toast">This is a toast message</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="what_is_your_gender" translatable="false">What is your gender?</string>
+    <string name="male" translatable="false">Male</string>
+    <string name="female" translatable="false">Female</string>
+    <string name="home" translatable="false">Home</string>
 
 
     <string-array name="soccer_clubs">

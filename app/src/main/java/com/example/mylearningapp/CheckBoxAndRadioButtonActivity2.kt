@@ -1,5 +1,6 @@
 package com.example.mylearningapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +13,7 @@ class CheckBoxAndRadioButtonActivity2 : AppCompatActivity() {
     lateinit var checkBoxBinding : ActivityCheckBoxAndRadioButton2Binding
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

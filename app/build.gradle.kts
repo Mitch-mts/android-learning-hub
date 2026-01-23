@@ -37,6 +37,7 @@ android {
         jvmTarget = "11"
     }
 
+//   this code piece enables view binding in android dev (a method of calling design components using kotlin)
     buildFeatures {
         viewBinding = true
     }

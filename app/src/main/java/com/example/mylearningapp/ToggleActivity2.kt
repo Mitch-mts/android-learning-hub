@@ -25,6 +25,7 @@ class ToggleActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         toggleBinding.toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 toggleBinding.toggleImage.visibility = View.INVISIBLE
